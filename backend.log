@@ -1,0 +1,107 @@
+INFO:     Will watch for changes in these directories: ['/Users/franklin/Github/claude-scientific-skills']
+INFO:     Uvicorn running on http://0.0.0.0:8000 (Press CTRL+C to quit)
+INFO:     Started reloader process [17807] using StatReload
+ENCRYPTION_KEY not set in environment. Using temporary key (data will be unreadable after restart if persisted).
+/Users/franklin/Github/claude-scientific-skills/auramax-core/src/auramax_api/auth/jwt_handler.py:30: UserWarning: JWT_SECRET not set - using insecure development default. Set JWT_SECRET in production!
+  warnings.warn(
+NVIDIA_API_KEY not found. NVIDIA services will be disabled.
+Process SpawnProcess-1:
+Traceback (most recent call last):
+  File "/opt/homebrew/Cellar/python@3.11/3.11.12/Frameworks/Python.framework/Versions/3.11/lib/python3.11/multiprocessing/process.py", line 314, in _bootstrap
+    self.run()
+  File "/opt/homebrew/Cellar/python@3.11/3.11.12/Frameworks/Python.framework/Versions/3.11/lib/python3.11/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/Users/franklin/Github/claude-scientific-skills/.venv/lib/python3.11/site-packages/uvicorn/_subprocess.py", line 80, in subprocess_started
+    target(sockets=sockets)
+  File "/Users/franklin/Github/claude-scientific-skills/.venv/lib/python3.11/site-packages/uvicorn/server.py", line 67, in run
+    return asyncio_run(self.serve(sockets=sockets), loop_factory=self.config.get_loop_factory())
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/franklin/Github/claude-scientific-skills/.venv/lib/python3.11/site-packages/uvicorn/_compat.py", line 30, in asyncio_run
+    return runner.run(main)
+           ^^^^^^^^^^^^^^^^
+  File "/opt/homebrew/Cellar/python@3.11/3.11.12/Frameworks/Python.framework/Versions/3.11/lib/python3.11/asyncio/runners.py", line 118, in run
+    return self._loop.run_until_complete(task)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/homebrew/Cellar/python@3.11/3.11.12/Frameworks/Python.framework/Versions/3.11/lib/python3.11/asyncio/base_events.py", line 654, in run_until_complete
+    return future.result()
+           ^^^^^^^^^^^^^^^
+  File "/Users/franklin/Github/claude-scientific-skills/.venv/lib/python3.11/site-packages/uvicorn/server.py", line 71, in serve
+    await self._serve(sockets)
+  File "/Users/franklin/Github/claude-scientific-skills/.venv/lib/python3.11/site-packages/uvicorn/server.py", line 78, in _serve
+    config.load()
+  File "/Users/franklin/Github/claude-scientific-skills/.venv/lib/python3.11/site-packages/uvicorn/config.py", line 439, in load
+    self.loaded_app = import_from_string(self.app)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/franklin/Github/claude-scientific-skills/.venv/lib/python3.11/site-packages/uvicorn/importer.py", line 19, in import_from_string
+    module = importlib.import_module(module_str)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/homebrew/Cellar/python@3.11/3.11.12/Frameworks/Python.framework/Versions/3.11/lib/python3.11/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1204, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1176, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1147, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 690, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 940, in exec_module
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "/Users/franklin/Github/claude-scientific-skills/auramax-core/src/auramax_api/main.py", line 13, in <module>
+    from .routers import ingest, workflow, auth, upload, billing, admin, clinic, password_reset, email_verification, reports, twin, trials, protocols, health, documents, structure, qms, explainability
+  File "/Users/franklin/Github/claude-scientific-skills/auramax-core/src/auramax_api/routers/trials.py", line 39, in <module>
+    sort_by: str = Query(SORT_FIELD_SCORE, description="Sort by field", default=SORT_FIELD_SCORE),
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: Query() got multiple values for argument 'default'
+WARNING:  StatReload detected changes in 'auramax-core/src/auramax_api/routers/trials.py'. Reloading...
+ENCRYPTION_KEY not set in environment. Using temporary key (data will be unreadable after restart if persisted).
+/Users/franklin/Github/claude-scientific-skills/auramax-core/src/auramax_api/auth/jwt_handler.py:30: UserWarning: JWT_SECRET not set - using insecure development default. Set JWT_SECRET in production!
+  warnings.warn(
+NVIDIA_API_KEY not found. NVIDIA services will be disabled.
+INFO:     Started server process [18155]
+INFO:     Waiting for application startup.
+2026-01-10 14:07:58,600 - auramax_api.main - INFO - Starting AuraMax API server...
+2026-01-10 14:07:58,612 - auramax_api.database.config - INFO - Database engine created: sqlite+aiosqlite:///./auramax.db
+2026-01-10 14:07:58,618 - auramax_api.database.config - INFO - Database tables created
+2026-01-10 14:07:58,618 - auramax_api.main - INFO - Database initialized
+INFO:     Application startup complete.
+WARNING:  StatReload detected changes in 'auramax-core/src/auramax_api/routers/trials.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+2026-01-10 14:08:01,951 - auramax_api.database.config - INFO - Database connections closed
+2026-01-10 14:08:01,951 - auramax_api.main - INFO - Shutting down AuraMax API server...
+INFO:     Application shutdown complete.
+INFO:     Finished server process [18155]
+ENCRYPTION_KEY not set in environment. Using temporary key (data will be unreadable after restart if persisted).
+/Users/franklin/Github/claude-scientific-skills/auramax-core/src/auramax_api/auth/jwt_handler.py:30: UserWarning: JWT_SECRET not set - using insecure development default. Set JWT_SECRET in production!
+  warnings.warn(
+NVIDIA_API_KEY not found. NVIDIA services will be disabled.
+INFO:     Started server process [18183]
+INFO:     Waiting for application startup.
+2026-01-10 14:08:02,804 - auramax_api.main - INFO - Starting AuraMax API server...
+2026-01-10 14:08:02,811 - auramax_api.database.config - INFO - Database engine created: sqlite+aiosqlite:///./auramax.db
+2026-01-10 14:08:02,816 - auramax_api.database.config - INFO - Database tables created
+2026-01-10 14:08:02,816 - auramax_api.main - INFO - Database initialized
+INFO:     Application startup complete.
+WARNING:  StatReload detected changes in 'auramax-core/src/auramax_api/routers/trials.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+2026-01-10 14:08:05,038 - auramax_api.database.config - INFO - Database connections closed
+2026-01-10 14:08:05,038 - auramax_api.main - INFO - Shutting down AuraMax API server...
+INFO:     Application shutdown complete.
+INFO:     Finished server process [18183]
+ENCRYPTION_KEY not set in environment. Using temporary key (data will be unreadable after restart if persisted).
+/Users/franklin/Github/claude-scientific-skills/auramax-core/src/auramax_api/auth/jwt_handler.py:30: UserWarning: JWT_SECRET not set - using insecure development default. Set JWT_SECRET in production!
+  warnings.warn(
+NVIDIA_API_KEY not found. NVIDIA services will be disabled.
+INFO:     Started server process [18184]
+INFO:     Waiting for application startup.
+2026-01-10 14:08:05,949 - auramax_api.main - INFO - Starting AuraMax API server...
+2026-01-10 14:08:05,957 - auramax_api.database.config - INFO - Database engine created: sqlite+aiosqlite:///./auramax.db
+2026-01-10 14:08:05,962 - auramax_api.database.config - INFO - Database tables created
+2026-01-10 14:08:05,962 - auramax_api.main - INFO - Database initialized
+INFO:     Application startup complete.
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+2026-01-10 14:08:22,320 - auramax_api.database.config - INFO - Database connections closed
+2026-01-10 14:08:22,320 - auramax_api.main - INFO - Shutting down AuraMax API server...
+INFO:     Application shutdown complete.
+INFO:     Finished server process [18184]
+INFO:     Stopping reloader process [17807]
