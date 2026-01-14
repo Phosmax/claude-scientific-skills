@@ -177,6 +177,30 @@ NEXT_PUBLIC_API_URL=http://localhost:8000
 - 目标: `/api/v1/goals/`
 - 趋势: `/api/v1/trends/`
 
+## 系统配置完整功能
+
+### 系统配置页面 (`/admin/settings/system`)
+
+**6标签页结构：**
+```
+/admin/settings/system
+├── 概览 (Overview)       - 今日统计、收入概览、快速操作
+├── 诊所信息 (Clinic)     - 诊所名称、联系方式、地址、时区
+├── 定价配置 (Pricing)    - Free/Pro/Clinic/Enterprise定价
+├── 安全设置 (Security)   - 2FA、会话超时、密码策略
+├── API配置 (API)         - NVIDIA NIM、外部API密钥
+└── 系统参数 (System)     - 上传限制、并发数、数据管理
+```
+
+**API集成：**
+- `/api/v1/admin/dashboard` - 仪表盘统计数据
+- `/api/v1/admin/config` - 系统配置读写
+
+### 管理员权限要求
+- 需要 `is_admin = true` 才能访问管理控制台
+- 使用 `usePermission` hook 进行权限验证
+- 非管理员用户会看到"访问被拒绝"页面
+
 ## 下一步计划
 
 1. **完善管理员界面**
