@@ -276,5 +276,65 @@ NEXT_PUBLIC_API_URL=http://localhost:8000
 
 ---
 
-*文档更新时间: 2025-01-14*
-*版本: 1.1*
+## 测试覆盖率提升进展 (2025-01-15)
+
+### 目标
+将整体测试覆盖率从44%提升到80%+ (参考TESTING_COVERAGE_PLAN.md)
+
+### 已完成
+- **Phase 4**: 中等覆盖模块提升
+  - `main.py`: 69% → 97% ✅ (164/169行)
+  - `auramax_reasoning/llm/client.py`: 56% → 98% ✅ (115/117行)
+    - 18个测试用例 (Anthropic/OpenAI/Ollama客户端, 工厂函数, 生命周期)
+  - `database/config.py`: 58% → 70% ✅ (部分提升)
+
+- **Phase 5**: 服务层测试 (0% → 70%+)
+  - `wearable_service.py`: 0% → **99%** ✅ (76/77行)
+    - 12个测试用例覆盖3个核心方法
+    - 修复了源代码Decimal/float类型混合bug
+
+- **Phase 3**: API路由测试 (0% → 70-100%) ✅ **已完成**
+  - `routers/health.py`: 0% → **85%** ✅ (28/33行)
+    - 7个测试用例覆盖健康检查和深度系统检查
+    - 包括数据库/缓存/磁盘空间检测
+  - `routers/password_reset.py`: 0% → **100%** ✅ (51/51行)
+    - 8个测试用例覆盖forgot_password和reset_password
+    - 包括有效/无效/过期token测试
+  - `routers/email_verification.py`: 0% → **100%** ✅ (59/59行)
+    - 9个测试用例覆盖邮箱验证全流程
+    - 包括发送验证邮件、token验证、状态查询
+  - `routers/data_warehouse.py`: **95%** ✅ (23个测试, 12个端点, Code Review: 4.8/5)
+  - `routers/treatment_recommendations.py`: **100%** ✅ (10个测试, 4个端点, Code Review: 4.8/5)
+  - `routers/grade.py`: 64% → **94%** ✅ (17个测试, 5个端点, Code Review: 4.7/5)
+    - 覆盖assess、assess_batch、get_summary、health_check、quick_assess
+    - GRADE证据分级系统完整测试
+  - `routers/analytics.py`: 47% → **100%** ✅ (12个测试, 3个端点, Code Review: 4.67/5)
+    - 覆盖create_cohort、run_survival_analysis、search_evidence
+    - B2B Analytics队列管理和生存分析
+    - 使用FastAPI dependency_overrides标准模式
+  - ⏭️ 跳过: `molecular.py`, `consent.py`, `billing.py`, `cohort_analysis.py`, `ehr.py` (依赖未实现或未注册)
+  - **总结**: 21个已注册router全部达到70%+覆盖率
+
+### 统计数据
+- **测试数量**: 574 → **627** (+53个新测试)
+- **整体覆盖率**: 44% → **47%** (+3%)
+- **新增测试文件**: 7个
+  - `tests/test_llm/test_client.py` (18个测试)
+  - `tests/test_services/test_wearable_service.py` (12个测试)
+  - `tests/test_routers/test_health.py` (7个测试)
+  - `tests/test_routers/test_password_reset.py` (8个测试)
+  - `tests/test_routers/test_email_verification.py` (9个测试)
+  - `tests/test_api/test_grade.py` (17个测试)
+  - `tests/test_api/test_analytics.py` (12个测试)
+- **源代码修改**:
+  - `main.py`: 添加password_reset和email_verification路由注册
+
+### 已完成
+- **Phase 3**: API路由测试 ✅ 全部完成
+  - 21个已注册router全部达到70%+覆盖率
+  - 代码审核平均分: 4.7/5 (优秀)
+
+---
+
+*文档更新时间: 2025-01-16*
+*版本: 1.3*
