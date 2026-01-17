@@ -325,7 +325,9 @@ NEXT_PUBLIC_API_URL=http://localhost:8000
 
 ### 统计数据
 - **测试数量**: 574 → **662** (+88个新测试)
-- **整体覆盖率**: 44% → **49%** (+5%)
+- **整体覆盖率 (src)**: **25%** (13,291行代码, 9,949行未覆盖)
+  - 注：包括 auramax_api, auramax_bio, auramax_data, auramax_reasoning 等所有子包
+  - auramax_api 核心模块覆盖率约 50-60%
 - **新增测试文件**: 9个
   - `tests/test_llm/test_client.py` (18个测试)
   - `tests/test_services/test_wearable_service.py` (12个测试)
