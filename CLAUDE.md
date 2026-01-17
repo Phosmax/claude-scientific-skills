@@ -300,6 +300,10 @@ NEXT_PUBLIC_API_URL=http://localhost:8000
     - 18个测试用例，3个测试类 (Code Review: 5/5 卓越)
     - 覆盖SHAP值计算、风险贡献分析、特征效应测试
     - 测试类：TestExplainabilityServiceInit, TestComputeRiskContribution, TestInterpret
+  - `structure_service.py`: 0% → **100%** ✅ (24/24行)
+    - 13个测试用例，4个测试类 (Code Review: 4.8/5 优秀)
+    - 覆盖AlphaFold蛋白质结构API集成、异步HTTP客户端Mock
+    - 测试类：TestGetProteinStructure, TestGetStructureFileUrl, TestStructureServiceIntegration, TestBaseUrl
 
 - **Phase 3**: API路由测试 (0% → 70-100%) ✅ **已完成**
   - `routers/health.py`: 0% → **85%** ✅ (28/33行)
