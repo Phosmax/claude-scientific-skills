@@ -296,6 +296,10 @@ NEXT_PUBLIC_API_URL=http://localhost:8000
     - 20个测试用例，6个测试类 (Code Review: 4.8/5)
     - 覆盖Levine Phenotypic Age算法、简化算法、异常处理、评分系统
     - 测试类：TestLevineCalculation, TestSimplifiedCalculation, TestExceptionHandling, TestAntiAgingScore, TestIntegrationScenarios
+  - `explainability_service.py`: 0% → **100%** ✅ (34/34行)
+    - 18个测试用例，3个测试类 (Code Review: 5/5 卓越)
+    - 覆盖SHAP值计算、风险贡献分析、特征效应测试
+    - 测试类：TestExplainabilityServiceInit, TestComputeRiskContribution, TestInterpret
 
 - **Phase 3**: API路由测试 (0% → 70-100%) ✅ **已完成**
   - `routers/health.py`: 0% → **85%** ✅ (28/33行)
