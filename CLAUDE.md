@@ -304,6 +304,10 @@ NEXT_PUBLIC_API_URL=http://localhost:8000
     - 13个测试用例，4个测试类 (Code Review: 4.8/5 优秀)
     - 覆盖AlphaFold蛋白质结构API集成、异步HTTP客户端Mock
     - 测试类：TestGetProteinStructure, TestGetStructureFileUrl, TestStructureServiceIntegration, TestBaseUrl
+  - `qms_service.py`: 0% → **100%** ✅ (14/14行)
+    - 23个测试用例，5个测试类 (Code Review: 5/5 卓越)
+    - 覆盖ISO 13485质量管理系统SOP生成、Markdown格式验证
+    - 测试类：TestListSops, TestGenerateSop, TestSopTemplates, TestQmsServiceIntegration, TestErrorHandling
 
 - **Phase 3**: API路由测试 (0% → 70-100%) ✅ **已完成**
   - `routers/health.py`: 0% → **85%** ✅ (28/33行)
