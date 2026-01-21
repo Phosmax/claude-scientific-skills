@@ -6,6 +6,11 @@ description: AuraMax 系统优化与加固综合工作流 (HIPAA合规与企业�
 
 本工作流旨在将 AuraMax 从开发原型转化为生产就绪、HIPAA 合规的医疗分析平台。
 
+## Phase 0: Pre-flight Checks (Environment)
+- [ ] Verify Codebase Consistency (Lint/Audit)
+- [ ] Confirm Python 3.11+ & Node Environment
+- [ ] Check Docker Availability
+
 ## Phase 1: 基础设施核心升级 (Infrastructure Core)
 **目标**: 迁移出 SQLite，建立高可用、强一致性的数据库层。
 
